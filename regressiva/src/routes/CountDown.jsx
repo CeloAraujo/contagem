@@ -15,6 +15,7 @@ const CountDown = () => {
   const eventTitle = event.title;
   const eventColor = event.color;
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [day, hour, minute, second] = useCountdown(event.date);
   return (
     <>
