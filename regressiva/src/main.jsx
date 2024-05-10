@@ -9,6 +9,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./routes/Home.jsx";
 import CountDown from "./routes/CountDown.jsx";
 
+// provider
+import { CountdownProvider } from "./context/CountDownContext.jsx";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +31,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+   <CountdownProvider>
+   <RouterProvider router={router} />
+   </CountdownProvider>
   </React.StrictMode>
 );
